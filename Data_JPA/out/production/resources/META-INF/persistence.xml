@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence version = "2.0" xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+    <!--这是一个单元，也就是在这个单元里包含了我们连接数据库，以及表示哪些实体类和具体JPA的提供商-->
+    <persistence-unit name="aa">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        
+        <!--指定有哪些实体类 和数据库有映射关系的类需要登记-->
+        <class>com.chen.bean.User</class>
+        
+        <!--连接数据库-->
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/itcast?useUnicode=true&amp;characterEncoding=utf8"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value="asd13247167823"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+
+            <!--creat:不管有没有表都一直新建表；update:如果有了表，就是用表；否则，就建表-->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+
+            <property name="hibernate.show_sql" value="true"/>
+        </properties>
+
+
+    </persistence-unit>
+    
+        
+
+
+
+
+
+</persistence>

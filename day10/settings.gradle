@@ -1,0 +1,6 @@
+rootProject.name = 'day10'
+include 'IOCDemo'
+include 'DIDemo'
+include 'PorxyDemo'
+include 'AOPDemo'
+

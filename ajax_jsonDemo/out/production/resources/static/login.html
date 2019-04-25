@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>以下采用Ajax发起请求</title>
+
+    <script type="text/javascript">
+
+        function ajaxFunction(){
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            return xmlhttp;
+        }
+        //向服务器发送请求GET().POST()
+        function get(){
+            alert("get!");
+
+            //1.获取对象
+            var http = ajaxFunction();
+
+            //2.准备请求  参数一：GET--从服务器中拿数据  参数二：请求的地址  参数三：true:异步
+            http.open("GET","ajaxGet?name=admin&password=123",true);  //向服务器发送的请求中带有数据
+
+            //3. 发送请求
+            http.send();
+        }
+
+        function post(){
+            alert("post!");
+
+            //1.获取对象
+            var http = ajaxFunction();
+
+            //2.准备请求  参数一：GET--从服务器中拿数据  参数二：请求的地址  参数三：true:异步
+            http.open("POST","ajaxPost",true);
+            http.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+
+            //3. 发送请求
+            http.send("name=admin&password=123"); //向服务器发送数据
+        }
+
+        //post接收服务器传来的数据："success_post"
+        function post2(){
+
+            //1.获取对象
+            var http = ajaxFunction();
+
+            //2.准备请求  参数一：GET--从服务器中拿数据  参数二：请求的地址  参数三：true:异步
+            http.open("POST","ajaxPost",true);
+            http.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+
+
+            /*
+            做好监听  只有这个请求的状态发生了改变，就执行右边的function
+            0: 请求未初始化
+            1: 服务器连接已建立
+            2: 请求已接收
+            3: 请求处理中
+            4: 请求已完成，且响应已就绪
+            在 onreadystatechange 事件中，我们规定当服务器响应已做好被处理的准备时所执行的任务。
+            当 readyState 等于 4 且状态为 200 时，表示响应已就绪
+             */
+            http.onreadystatechange=function()
+            {
+                //对状态进行判定
+                if (http.readyState==4 && http.status==200)
+                {
+                    var result=http.responseText;
+                    alert("result ="+result);
+                }
+            }
+            //3. 发送请求
+            http.send("name=admin&password=123"); //向服务器发送数据
+        }
+
+    </script>
+</head>
+<body>
+
+    不要走原来刷新的路线，直接在页面执行Javacript的方法。
+    <a href ="javascript:get()">采用Ajax发起请求11</a>
+    <br><br><br><br><br>
+    <a href ="javascript:post()">采用Ajax发起post请求</a>
+    <br><br><br><br><br>
+    <a href ="javascript:post2()">采用Ajax接受到服务器响应</a>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,3 @@
+rootProject.name = 'ajax_jsonDemo'
+include 'CityDemo'
+

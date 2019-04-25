@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+    </wildcardResourcePatterns>
+    <bytecodeTargetLevel>
+      <module name="AOPDemo_main" target="1.8" />
+      <module name="AOPDemo_test" target="1.8" />
+      <module name="day10_main" target="1.8" />
+      <module name="day10_test" target="1.8" />
+      <module name="DIDemo_main" target="1.8" />
+      <module name="DIDemo_test" target="1.8" />
+      <module name="IOCDemo_main" target="1.8" />
+      <module name="IOCDemo_test" target="1.8" />
+      <module name="PorxyDemo_main" target="1.8" />
+      <module name="PorxyDemo_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

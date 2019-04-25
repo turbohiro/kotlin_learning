@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+    欢迎您，<!--/*@thymesVar id="nickname" type=""*/-->
+    <p th:text="${nickname}"></p>
+    <input type="text" th:value="${nickname}"/>
+    1.取值的写法是：${属性的名称},这种写法不能独立存在，必须放在th:***="${属性的名称}"
+
+</body>
+</html>

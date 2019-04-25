@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-------
+    注释-------->
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+
+        function ajaxFunction(){
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            return xmlhttp;
+        }
+
+
+        function verifyUsername(){
+            //发送请求，把用户名传过去，收结果。
+
+            //1.获得用户名
+            var username = document.getElementById("username").value;
+
+            //2.发请求
+            var http = ajaxFunction();
+
+            http.open("POST","checkUserName",true);
+            http.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+
+            //获取服务器回来的结果
+            http.onreadystatechange=function()
+            {
+                //对状态进行判定
+                if (http.readyState==4 && http.status==200)
+                {
+                    var result=http.responseText;
+                    var element = document.getElementById("result");
+                    if("use"==result){
+                        element.innerHTML="<font color='red'>用户名被使用</font>"
+                    }else{
+                        element.innerHTML="<font color='red'>用户名没有被使用</font>"
+                    }
+                }
+            }
+            http.send("username="+username);//这儿前一个username与服务器中的username命名对应好，后一个username与页面中用户名（usename)的值对应好
+        }
+
+        function verifyUsername2(){
+            //获得文本框（用户输入）的内容
+            var user = $("#username").val();
+            //发起文本框内容给服务器请求，并获得服务器返回结果data
+            $.post("checkUserName",{"username":user},function(data){
+                if("use" == data ){
+                    $("#result").html("<font color='red'>用户名被使用</font>")
+                }else{
+                    $("#result").html("<font color='green'>用户名没有被使用</font>")
+
+                }
+            })
+        }
+
+    </script>
+</head>
+<body>
+
+    <form>
+        用户名：<input type="text" id="username" name = "username" onblur="verifyUsername2()"/><span id="result">saf</span><br><br>
+        密码：<input type="text" name = "password"/><br><br>
+        <input type="submit" value="注册"/><br><br>
+    </form>
+</body>
+</html>

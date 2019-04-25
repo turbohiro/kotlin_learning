@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!--这里是使用xml方式来托管类。-->
+
+    <!--这里演示的是有参构造方式注入值-->
+    <!--<bean id="us"  class="com.itheima.service.impl.UserServiceImpl">-->
+
+        <!--通过这行配置，可以让spring匹配有参构造， name : 构造参数的名称 ， value : 要赋的值-->
+       <!-- <constructor-arg name="address" value="深圳"></constructor-arg>
+
+    </bean>-->
+
+
+
+    <!--这里演示的是使用set方法注入值-->
+<!--
+    <bean id="us" class="com.itheima.service.impl.UserServiceImpl02">
+        <property name="address" value="北京"></property>
+    </bean>-->
+
+
+
+    <!--以下演示注入集合数据类型-->
+   <!-- <bean id="us" class="com.itheima.service.impl.UserServiceImpl03">-->
+<!--
+        <property name="address">
+
+            <array>
+                <value>深圳1</value>
+                <value>深圳2</value>
+                <value>深圳3,黑马</value>
+                <value>深圳4</value>
+            </array>
+        </property>-->
+<!--
+        <property name="address">
+
+            <list>
+                <value>深圳1</value>
+                <value>深圳2</value>
+                <value>深圳3,黑马</value>
+                <value>深圳4</value>
+            </list>
+
+        </property>-->
+
+     <!--   <property name="address">
+            <map>
+
+                <entry key="地址1" value="北京1"/>
+                <entry key="地址2" value="北京2"/>
+                <entry key="地址3" value="北京3"/>
+                <entry key="地址4" value="北京4"/>
+
+
+            </map>
+        </property>
+
+    </bean>-->
+
+
+    <!--以下演示对象类型的注入-->
+   <!-- <bean id="ud" class="com.itheima.dao.impl.UserDaoImpl"></bean>
+
+    <bean id="us" class="com.itheima.service.impl.UserServiceImpl04">
+
+        ref === reference == 引用
+
+            要调用UserServiceImpl04中的setUserDao方法，并且这个方法要求一个参数
+            这个参数就拿ud这个名字对应的实例传递进来。
+
+        <property name="userDao" ref="ud"></property>
+    </bean>-->
+
+
+   <!-- 使用注解来完成以下xml的配置
+        1. 创建UserDaoImpl ，起一个别名 ud
+        2. 创建UserServiceImpl05 ，起一个别名 us
+        3. 目的要给UserServiceImpl05里面的userDao变量赋值。-->
+    <!--<bean id="ud" class="com.itheima.dao.impl.UserDaoImpl"></bean>
+    <bean id="us" class="com.itheima.service.impl.UserServiceImpl05">
+        <property name="userDao" ref="ud"></property>
+     </bean>-->
+
+
+    <!--如果使用注解，要告诉spring，去哪个包下，找。-->
+    <context:component-scan base-package="com.itheima"/>
+
+</beans>

@@ -1,0 +1,4 @@
+rootProject.name = 'ModuleDemo'
+include 'App'
+include 'Core'
+

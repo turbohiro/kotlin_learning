@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AOPDemo.iml" filepath="$PROJECT_DIR$/.idea/modules/AOPDemo.iml" group="AOPDemo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AOPDemo/AOPDemo_main.iml" filepath="$PROJECT_DIR$/.idea/modules/AOPDemo/AOPDemo_main.iml" group="AOPDemo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AOPDemo/AOPDemo_test.iml" filepath="$PROJECT_DIR$/.idea/modules/AOPDemo/AOPDemo_test.iml" group="AOPDemo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DIDemo.iml" filepath="$PROJECT_DIR$/.idea/modules/DIDemo.iml" group="DIDemo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DIDemo/DIDemo_main.iml" filepath="$PROJECT_DIR$/.idea/modules/DIDemo/DIDemo_main.iml" group="DIDemo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DIDemo/DIDemo_test.iml" filepath="$PROJECT_DIR$/.idea/modules/DIDemo/DIDemo_test.iml" group="DIDemo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IOCDemo.iml" filepath="$PROJECT_DIR$/.idea/modules/IOCDemo.iml" group="IOCDemo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IOCDemo/IOCDemo_main.iml" filepath="$PROJECT_DIR$/.idea/modules/IOCDemo/IOCDemo_main.iml" group="IOCDemo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IOCDemo/IOCDemo_test.iml" filepath="$PROJECT_DIR$/.idea/modules/IOCDemo/IOCDemo_test.iml" group="IOCDemo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PorxyDemo.iml" filepath="$PROJECT_DIR$/.idea/modules/PorxyDemo.iml" group="PorxyDemo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PorxyDemo/PorxyDemo_main.iml" filepath="$PROJECT_DIR$/.idea/modules/PorxyDemo/PorxyDemo_main.iml" group="PorxyDemo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PorxyDemo/PorxyDemo_test.iml" filepath="$PROJECT_DIR$/.idea/modules/PorxyDemo/PorxyDemo_test.iml" group="PorxyDemo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/day10.iml" filepath="$PROJECT_DIR$/.idea/modules/day10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/day10_main.iml" filepath="$PROJECT_DIR$/.idea/modules/day10_main.iml" group="day10" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/day10_test.iml" filepath="$PROJECT_DIR$/.idea/modules/day10_test.iml" group="day10" />
+    </modules>
+  </component>
+</project>

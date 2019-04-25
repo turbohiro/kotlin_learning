@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+
+    <script type="text/javascript">
+    //1.发起请求去获取省份的数据  入口函数：页面加载函数就执行
+        $(function () {
+            $.get("listProvince",function () {
+                //alert("data=="+data);
+                //data:是一个json的几何数据，里面装的是json对象
+                //遍历这个集合，遍历一次会执行一次function,里面的i:遍历的下标 n：便利出来的每一个元素
+                $(data).each(function (i,n) {
+                    //alert("n="+n.name);
+                    $("#province").append("<option value='"+n.id+"'>"+n.name+"</option>")
+
+                })
+
+            })
+
+        })
+
+        function changeProvince(){
+            var id = $("#province").val();
+            alert("id="+id);
+
+            //发送请求
+            $.post("listCity",{"id":id},function(data){
+                //追加之前先清空内容
+                $("#city").html("<option value='' >--请选择--</option>");
+                $(data).each(function(i,m){
+                   $("#city").append("<option value='"+m.id+"'>"+m.name+"</option>")
+
+
+
+               })
+            })
+
+
+        }
+
+    </script>
+
+</head>
+<body>
+
+        省份：
+        <select id="province" onchange="changeProvince()">//监听省份的变化
+            <option value="">--请选择--</option>
+        </select>
+
+        城市：
+        <select id="city" >
+            <option value="">--请选择--</option>
+        </select>
+
+</body>
+</html>

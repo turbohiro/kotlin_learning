@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+<!--要想让spring帮忙创建谁的实例，就在这里写一个bean标签-->
+
+
+    <!--
+
+        bean标签： 是用来告诉spring要创建什么类的实例，这个标签可以写很多个
+        class : 表示要创建哪个类的实例，这里要写类的全路径  包名.类名
+        id |  name :唯一标识符 其实就是给这个实例起一个别名 有点类似map集合的key一样。 以后我们拿着这个别名就能获取到这个类的实例。
+
+        默认情况下spring生成的实例是单例的。如果想要做成多例：
+            scope="prototype"
+    -->
+    <!--托管扩展类和被扩展类-->
+   <bean id="us" class = "com.chen.service.Impl.UserServiceImpl" >
+        <constructor-arg name="address" value="深圳"></constructor-arg>
+    </bean>
+    <bean id="logger" class="com.chen.util.logger"></bean>
+    <!--2.开始配置aop  在执行UserService的save方法的时候，先执行logger.log()-->
+
+
+    <!--如果要用注解来做：只要能表达这一行代码的意思即可
+    1.告诉spring要创建UserService的实例
+    2.并且这个类其别名，以后使用这个别名就能找到类。
+
+   -->
+    <!--<context:component-scan base-package="com.chen.service.Impl"></context:component-scan>-->
+
+    <!--通过这行配置，可以让spring匹配有参构造，name:构造参数的名称， value:要赋的值-->
+
+
+    <!--ServiceImpl02-->
+    <!--<bean id="us" class="com.chen.service.Impl.UserServiceImpl02">
+        <property name="address">
+            <map>
+                <entry key="地址1" value="北京1"/>
+                <entry key="地址2" value="北京2"/>
+                <entry key="地址3" value="北京3"/>
+                <entry key="地址4" value="北京4"/>
+            </map>
+        </property>
+    </bean>-->
+
+    <!--<bean id="us" class="com.chen.service.Impl.UserServiceImpl02">
+        <property name="address">
+            <list>
+                <value>上海</value>
+                <value>深圳</value>
+                <value>广州</value>
+            </list>
+        </property>
+    </bean>-->
+
+
+
+
+</beans>

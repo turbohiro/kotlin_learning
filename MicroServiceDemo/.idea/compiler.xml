@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="service-qiecai" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api-service_main" target="1.8" />
+      <module name="api-service_test" target="1.8" />
+      <module name="eureka-client_main" target="1.8" />
+      <module name="eureka-client_test" target="1.8" />
+      <module name="eureka-service_main" target="1.8" />
+      <module name="eureka-service_test" target="1.8" />
+      <module name="service-dcf_main" target="1.8" />
+      <module name="service-dcf_test" target="1.8" />
+      <module name="service-qiecai" target="1.8" />
+      <module name="service-tds" target="1.8" />
+      <module name="service01-tomato_main" target="1.8" />
+      <module name="service01-tomato_test" target="1.8" />
+      <module name="service01_qiecai_main" target="1.8" />
+      <module name="service01_qiecai_test" target="1.8" />
+      <module name="service01_tds_main" target="1.8" />
+      <module name="service01_tds_test" target="1.8" />
+      <module name="service02-qiecai_main" target="1.8" />
+      <module name="service02-qiecai_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

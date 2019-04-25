@@ -1,0 +1,4 @@
+rootProject.name = 'day02'
+include 'RequestResponseDemp'
+include 'pageDemo'
+

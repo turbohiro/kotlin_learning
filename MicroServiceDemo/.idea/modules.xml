@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api-service.iml" filepath="$PROJECT_DIR$/.idea/modules/api-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api-service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/api-service_main.iml" group="api-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api-service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/api-service_test.iml" group="api-service" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-client/eureka-client.iml" filepath="$PROJECT_DIR$/eureka-client/eureka-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eureka-client_main.iml" filepath="$PROJECT_DIR$/.idea/modules/eureka-client_main.iml" group="eureka-client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eureka-client_test.iml" filepath="$PROJECT_DIR$/.idea/modules/eureka-client_test.iml" group="eureka-client" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-service/eureka-service.iml" filepath="$PROJECT_DIR$/eureka-service/eureka-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eureka-service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/eureka-service_main.iml" group="eureka-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eureka-service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/eureka-service_test.iml" group="eureka-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-dcf.iml" filepath="$PROJECT_DIR$/.idea/modules/service-dcf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-dcf_main.iml" filepath="$PROJECT_DIR$/.idea/modules/service-dcf_main.iml" group="service-dcf" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service-dcf_test.iml" filepath="$PROJECT_DIR$/.idea/modules/service-dcf_test.iml" group="service-dcf" />
+      <module fileurl="file://$PROJECT_DIR$/service01_qiecai/service01_qiecai.iml" filepath="$PROJECT_DIR$/service01_qiecai/service01_qiecai.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service01_qiecai_main.iml" filepath="$PROJECT_DIR$/.idea/modules/service01_qiecai_main.iml" group="service01_qiecai" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service01_qiecai_test.iml" filepath="$PROJECT_DIR$/.idea/modules/service01_qiecai_test.iml" group="service01_qiecai" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service01_tds.iml" filepath="$PROJECT_DIR$/.idea/modules/service01_tds.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service01_tds_main.iml" filepath="$PROJECT_DIR$/.idea/modules/service01_tds_main.iml" group="service01_tds" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service01_tds_test.iml" filepath="$PROJECT_DIR$/.idea/modules/service01_tds_test.iml" group="service01_tds" />
+    </modules>
+  </component>
+</project>

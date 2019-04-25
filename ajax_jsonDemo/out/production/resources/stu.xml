@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<stus>
+    <stu id="3">  <!--文档标签，属性-->
+        <name>张三</name>
+        <age>18</age>
+        <phone>12334</phone>
+    </stu>
+
+    <stu id="3">  <!--文档标签，属性-->
+        <name>包吧</name>
+        <age>20</age>
+        <phone>17034</phone>
+    </stu>
+</stus>

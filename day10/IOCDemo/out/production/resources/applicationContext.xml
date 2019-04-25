@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!--这里是使用xml方式来托管类。-->
+    <!--<bean id="us"  class="com.itheima.service.impl.UserServiceImpl"></bean>-->
+
+    <!--如果要用注解来做：只要能表达出来这一行代码的意思即可。
+
+        1. 告诉Spring要创建UserServiceImpl的实例
+
+        2. 并且这个这个类起了一个别名，以后拿着这个别名能找到这个实例。
+
+    -->
+
+    <!--要在这里告诉spring去哪里找类，-->
+    <!--扫描这个包下的所有子包里面的类。识别哪个类上有注解，然后创建它的实例-->
+    <context:component-scan base-package="com.itheima"/>
+
+</beans>
